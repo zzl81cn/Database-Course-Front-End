@@ -1,0 +1,50 @@
+.triangle1 {
+	position: absolute;
+	top: 0px;
+	left: 400px;
+    width:0; 
+    height:0; 
+    border-top:15px solid transparent;
+    border-bottom: 15.5px solid transparent;
+    border-left: 25px solid blue;
+}
+.t1 {
+	position: absolute;
+	width: 400px;
+	height:30px;
+	background: blue;
+}
+.triangle2 {
+	position: absolute;
+	top: 0px;
+	left: 400px;
+    width:0; 
+    height:0; 
+    border-top:15px solid transparent;
+    border-bottom: 15.5px solid transparent;
+    border-left: 25px solid green;
+}
+.t2 {
+	position: absolute;
+	left: 400px;
+	width: 400px;
+	height:30px;
+	background: green;
+}
+.triangle3 {
+	position: absolute;
+	top: 0px;
+	left: 400px;
+    width:0; 
+    height:0; 
+    border-top:15px solid transparent;
+    border-bottom: 15.5px solid transparent;
+    border-left: 25px solid red;
+}
+.t3 {
+	position: absolute;
+	left: 800px;
+	width: 400px;
+	height:30px;
+	background: red;
+}
