@@ -1,0 +1,36 @@
+/*
+深蓝:#004E64
+中蓝:#037FA2
+浅蓝:#03ACDC
+*/
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+body {
+    font-family: '华文细黑', '微软雅黑', sans-serif;
+    background: -webkit-linear-gradient(140deg, #00C8FF, #51FEB3);
+    padding-top: 50px;
+    margin: 0;
+}
+
+div {
+    background-color: white;
+}
+
+section {
+    background-color: white;
+}
+
+img {
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+}
