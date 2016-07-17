@@ -1,20 +1,20 @@
 $(
     function () {
         // 按钮点击效果
-        var $buttons = $('button'),
+        var $buttons = $('#social button'),
             $followButton = $('#follow'),
             $unfollowButton = $('#unfollow');
 
         $buttons.each(function(index, el) {
             $(el).click(function(event) {
-                $(el).animate({top: '-=20'}, 200)
+                $(el).animate({top: '-1'}, 200)
                     .css({'z-index': '0', 'cursor': 'auto'})
-                    .animate({top: '+=24', right: '-=5'}, 200, function() {
+                    .animate({top: '19', right: '5'}, 200, function() {
                         $(this).attr('disabled', true);
                     })
-                $($buttons[1 - index]).animate({top: '+=20'}, 200)
+                $($buttons[1 - index]).animate({top: '35'}, 200)
                     .css({'z-index': '1', 'cursor': 'pointer'})
-                    .animate({top: '-=24', right: '+=5'}, 200, function() {
+                    .animate({top: '15', right: '10'}, 200, function() {
                         $(this).attr('disabled', false);
                     });
             });
@@ -52,9 +52,9 @@ $(
         };
 
         var option = {
-            backgroundColor: '#21DEE0',
+            backgroundColor: '#F3F3F3',
             color: [
-                '#80F1BE'
+                '#999999'
             ],
             grid: {
                 x: 50,
@@ -80,7 +80,7 @@ $(
                 name: 'Date',
                 nameGap: 5,
                 nameTextStyle: {
-                    color: '#fff',
+                    color: '#999999',
                     fontSize: 14
                 },
                 max: 31,
@@ -89,18 +89,18 @@ $(
                 },
                 axisLine: {
                     lineStyle: {
-                        color: '#777'
+                        color: '#999999'
                     }
                 },
                 axisTick: {
                     lineStyle: {
-                        color: '#777'
+                        color: '#999999'
                     }
                 },
                 axisLabel: {
                     formatter: '{value}',
                     textStyle: {
-                        color: '#fff'
+                        color: '#999999'
                     }
                 }
             },
@@ -110,7 +110,7 @@ $(
                 nameLocation: 'end',
                 nameGap: 20,
                 nameTextStyle: {
-                    color: '#fff',
+                    color: '#999999',
                     fontSize: 16
                 },
                 axisLine: {
@@ -128,7 +128,7 @@ $(
                 },
                 axisLabel: {
                     textStyle: {
-                        color: '#fff'
+                        color: '#999999'
                     }
                 }
             },

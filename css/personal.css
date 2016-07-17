@@ -22,10 +22,23 @@
     border-radius: 4px;
 }
 
+#personalInfo button {
+    height: 25px;
+    width: 65px;
+    border-radius: 4px;
+    color: white;
+    position: absolute;
+}
+
 #personalInfo #words {
     position: relative;
 }
-/**/
+
+#personalInfo #words #edit {
+    background-color: #00FBCD;
+    right: 10px;
+    box-shadow: #00C9FA 5px 4px 0 0;
+}
 
 #personalInfo h2 {
     margin: 10px auto;
@@ -47,14 +60,6 @@
     position: relative;
 }
 
-#social button {
-    height: 25px;
-    width: 65px;
-    border-radius: 4px;
-    color: white;
-    position: absolute;
-}
-
 #social button#follow {
     background-color: #00FBCD;
     z-index: 1;
@@ -74,7 +79,7 @@
 
 #social div a {
     font-size: 25px;
-    color: #029987;
+    color: #0EA2C2;
     display: inline-block;
     margin-right: 12px;
 }
@@ -129,7 +134,53 @@
 #repository ul {
     margin: 0;
     margin-top: -2px;
-    height: calc(100% - 340px);
+    height: calc(100% - 380px);
     width: 100%;
-    border: 2px solid #F3F3F3;
+    /*border: 1px solid #F3F3F3;*/
+}
+
+#repository ul li {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 15px;
+    border: 1px solid #F3F3F3;
+}
+
+#repository ul li a {
+    color: #0EA2C2;
+    font-size: 20px;
+}
+
+#repository ul li .label {
+    padding: 4px;
+    font-size: 14px;
+    color: white;
+    border-radius: 4px;
+    vertical-align: text-top;
+}
+
+.label.offical {
+    background-color: #EFC52A;
+}
+
+.label.original {
+    background-color: #3EF1C4;
+}
+
+.label.contribute {
+    background-color: #9e6bcb;
+}
+
+#repository ul li p {
+    color: #858585;
+    margin-left: 20px;
+}
+
+#repository .bottom {
+    color: #898989;
+    font-size: 20px;
+}
+
+#repository .bottom #chart {
+    height: 260px;
 }
