@@ -7,6 +7,7 @@ $(
 
         $buttons.each(function(index, el) {
             $(el).click(function(event) {
+
                 $(el).animate({top: '-1'}, 200)
                     .css({'z-index': '0', 'cursor': 'auto'})
                     .animate({top: '19', right: '5'}, 200, function() {
@@ -20,6 +21,29 @@ $(
             });
         });
 
+        // 点击选项卡切换概览，详情和留言
+        var $navLink = $('#repository a');
+        $navLink.each(function(index, el) {
+            $(el).click(function(event) {
+                if ($(el).attr('id') === 'navLink1') {
+                    $('#repository ul').css('height', 'calc(100% - 380px)');
+                    $('#repository ul li').css('height', '20%');
+                    $('main').css('height', '100%');
+                } else {
+                    $('#repository ul').css('height', 'auto');
+                    $('#repository ul li').css('height', 'auto');
+                    $('main').css({'height': 'auto', 'min-height': '100%'});
+                }
+            })
+        });
+
+        // 点击弹窗编辑资料
+        var $editButton = $('#edit');
+        $edit.click(function(event) {
+            
+        });
+
+
         // 画图表
         var myChart = echarts.init(document.getElementById('chart'));
 
@@ -28,6 +52,15 @@ $(
         [1, 15, 30, "Moderately polluted"],
         [2, 10, 11, "Excellent"],
         [3, 0, 1, "what"]
+        [4, 15, 30, "Moderately polluted"],
+        [5, 10, 11, "Excellent"],
+        [6, 0, 1, "what"]
+        [7, 15, 30, "Moderately polluted"],
+        [8, 10, 11, "Excellent"],
+        [9, 0, 1, "what"]
+        [10, 15, 30, "Moderately polluted"],
+        [11, 10, 11, "Excellent"],
+        [12, 0, 1, "what"]
         ];
 
         var schema = [
@@ -54,7 +87,7 @@ $(
         var option = {
             backgroundColor: '#F3F3F3',
             color: [
-                '#999999'
+                '#75E7C2'
             ],
             grid: {
                 x: 50,

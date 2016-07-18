@@ -13,6 +13,8 @@ body {
     background: -webkit-linear-gradient(140deg, #00C8FF, #51FEB3);
     padding-top: 50px;
     margin: 0;
+    height: auto;
+    width: auto;
 }
 
 button {
@@ -28,6 +30,11 @@ img {
 input {
     border: none;
     outline: none;
+}
+
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
 }
 
 li {
@@ -54,6 +61,7 @@ ul {
     left: 0;
     width: 100%;
     text-align: center;
+    z-index: 10;
 }
 
 #navigationBar > div {
