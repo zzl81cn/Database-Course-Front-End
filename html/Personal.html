@@ -8,12 +8,10 @@
     <meta charset="UTF-8">
     <title>个人主页</title>
     <link rel="stylesheet" href="../css/normalize.css" />
-    <link rel="stylesheet" href="../css/sweetalert.css" />
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/personalStyle.css">
 
     <script src="../js/echarts.js"></script>
-    <script src="../js/sweetalert-dev.js"></script>
     <script src="../js/jquery-2.1.4.js"></script>
     <script src="../js/app.js"></script>
     <script src="../js/personal.js"></script>
@@ -82,6 +80,7 @@
             <img src="../img/otherHead.png" />
             <div id="words">
                 <button id="edit">编辑资料</button>
+
                 <h2>Minami Kotori</h2>
                 <p id="motto">
                     Preserves useful defaults
@@ -263,5 +262,45 @@
             </ul>
         </div>
     </main>
+
+    <!-- 弹框 -->
+    <div id="fill">
+        <div id="popup">
+            <nav>
+                <a class="selected" href="#">基本</a>
+                <a href="#">密码</a>
+            </nav>
+            <form id="basicForm">
+                <p>头像</p>
+                <img src="../img/head.jpg" />
+                <a href="#">上传头像<input type="file" value="上传头像"></a>
+                <p>昵称</p>
+                <input type="text" name="username">
+                <p>个性签名</p>
+                <textarea></textarea>
+                <p>电子邮件</p>
+                <input type="text" name="username">
+                <p>住址</p>
+                <input type="text" name="username">
+                <div class="submitDiv">
+                    <button>取消</button>
+                    <input type="submit" value="保存修改">
+                </div>
+            </form>
+            <form id="passwordForm">
+                <p>输入密码</p>
+                <input type="text" name="username">
+                <p>输入新密码</p>
+                <input type="text" name="username">
+                <p>确认新密码</p>
+                <input type="text" name="username">
+                <div class="submitDiv">
+                    <button>取消</button>
+                    <input type="submit" value="保存修改">
+                </div>
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>

@@ -38,9 +38,33 @@ $(
         });
 
         // 点击弹窗编辑资料
-        var $editButton = $('#edit');
-        $edit.click(function(event) {
-            
+        $('#edit').click(function(event) {
+            $('#fill').show(0);
+            $('#popup').addClass('show');
+        });
+
+        $('#popup form button').click(function(event) {
+            $('#popup').removeClass('show');
+            $('#fill').delay(200).hide(0);
+        })
+
+
+        var $formNavLink = $('#popup nav a');
+        $formNavLink.each(function(index, el) {
+            $(el).click(function(event) {
+                $(el).addClass('selected');
+                $($formNavLink[1 - index]).removeClass('selected');
+
+                if (index === 0) {
+                    $('#popup').css('height', '540');
+                    $('#basicForm').css('margin-left', '+=404');
+                    $('#passwordForm').css({'margin-left': '+=404'});
+                } else {
+                    $('#popup').css('height', '400');
+                    $('#basicForm').css('margin-left', '-=404');
+                    $('#passwordForm').css({'margin-left': '-=404', 'margin-top': '0'});
+                }
+            });
         });
 
 

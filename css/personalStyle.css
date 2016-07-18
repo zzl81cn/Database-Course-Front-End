@@ -107,14 +107,16 @@
     margin: 0 1%;
 }
 
-#repository nav {
+#repository nav,
+#popup nav {
     border: 2px solid #F3F3F3;
     border-bottom: none;
     display: inline-block;
     text-align: center;
 }
 
-#repository nav a {
+#repository nav a,
+#popup nav a {
     width: 120px;
     height: 50px;
     float: left;
@@ -123,7 +125,8 @@
     transform: translateZ(0);
 }
 
-#repository nav a.selected::before {
+#repository nav a.selected::before,
+#popup nav a.selected::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -229,7 +232,8 @@
     border-color: #f3f3f3 #f3f3f3 transparent transparent;
 }
 
-#messageInput div textarea {
+#messageInput div textarea,
+#basicForm textarea {
     border: none;
     outline: none;
     resize: none;
@@ -292,6 +296,136 @@
 #messageBoard #message span:nth-of-type(2) {
     color: #858585;
     font-size: 14px;
+}
+
+/* 弹窗样式 */
+#fill {
+    position: absolute;
+    height: calc(100% - 50px);
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 20;
+    display: none;
+}
+
+#fill #popup {
+    display: inline-block;
+    height: 540px;
+    /* height: 400px; */
+    width: 404px;
+    overflow: hidden;
+    background: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -350px;
+    margin-left: -202px;
+    border-radius: 5px;
+    border: 2px solid #F3F3F3;
+
+    transform: scale(0);
+    -webkit-transition: transform 0.2s ease;
+}
+
+#fill #popup.show {
+    transform: scale(1);
+}
+
+#fill #popup nav {
+    border: none;
+}
+
+#fill #popup nav a {
+    width: 200px;
+}
+
+#popup form {
+    box-sizing: border-box;
+    float: left;
+    width: 100%;
+    -webkit-transition: margin-left 0.2s ease;
+}
+
+#basicForm,
+#passwordForm {
+    padding: 5px 15px;
+}
+
+#passwordForm {
+    margin-left: 404px;
+    margin-top: -482px;
+}
+
+#basicForm p {
+    margin: 5px 0;
+}
+
+#basicForm img {
+    height: 90px;
+    width: 90px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+#basicForm a {
+    width: 65px;
+    height: 25px;
+    background: #3EF1C4;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    border-radius: 4px;
+    line-height: 25px;
+    margin-left: 20px;
+}
+
+#basicForm input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#basicForm input[type="text"],
+#passwordForm input[type="text"] {
+    box-sizing: border-box;
+    background: #F3F3F3;
+    padding: 5px;
+    width: 100%;
+    font-size: 16px;
+}
+
+#passwordForm input[type="text"] {
+    width: calc(100% - 40px);
+}
+
+.submitDiv {
+    margin-top: 15px;
+    border-top: 1px solid #C8C8C8;
+}
+
+.submitDiv button {
+    background: #FF4539;
+    color: white;
+    width: 100%;
+    height: 30px;
+    border-radius: 4px;
+    margin: 10px auto;
+}
+
+.submitDiv input[type="submit"] {
+    width: 100%;
+    height: 30px;
+    border-radius: 4px;
+    color: white;
+    background-color: #3EF1C4;
+    font-size: 14px;
+}
+
+#basicForm textarea {
+    background: #F3F3F3;
 }
 
 @media (max-height: 800px) {
