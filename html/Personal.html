@@ -8,11 +8,13 @@
     <meta charset="UTF-8">
     <title>个人主页</title>
     <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/sweetalert.css">
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/personalStyle.css">
 
     <script src="../js/echarts.js"></script>
     <script src="../js/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="../js/sweetalert-dev.js"></script>
     <script src="../js/app.js"></script>
     <script src="../js/personal.js"></script>
 </head>
@@ -272,8 +274,8 @@
             </nav>
             <form id="basicForm">
                 <p>头像</p>
-                <img src="../img/head.jpg" />
-                <a href="#">上传头像<input type="file" value="上传头像"></a>
+                <img id="newHead" src="../img/head.jpg" />
+                <a id="upload" href="#">上传头像<input id="uploadImage" type="file" value="上传头像" onchange="loadImageFile()"></a>
                 <p>昵称</p>
                 <input type="text" name="username">
                 <p>个性签名</p>
@@ -289,11 +291,11 @@
             </form>
             <form id="passwordForm">
                 <p>输入密码</p>
-                <input type="text" name="username">
+                <input type="password" name="password">
                 <p>输入新密码</p>
-                <input type="text" name="username">
+                <input type="password" name="newPassword">
                 <p>确认新密码</p>
-                <input type="text" name="username">
+                <input type="password" name="repeatPassword">
                 <div class="submitDiv">
                     <button>取消</button>
                     <input type="submit" value="保存修改">
@@ -301,6 +303,28 @@
             </form>
         </div>
     </div>
+
+
+    <script>
+        // 上传头像预览
+
+        oFReader = new FileReader(),
+        rFilter = /^(?:image\/bmp|image\/cis\-cod|image\/gif|image\/ief|image\/jpeg|image\/jpeg|image\/jpeg|image\/pipeg|image\/png|image\/svg\+xml|image\/tiff|image\/x\-cmu\-raster|image\/x\-cmx|image\/x\-icon|image\/x\-portable\-anymap|image\/x\-portable\-bitmap|image\/x\-portable\-graymap|image\/x\-portable\-pixmap|image\/x\-rgb|image\/x\-xbitmap|image\/x\-xpixmap|image\/x\-xwindowdump)$/i;
+
+        oFReader.onload = function (oFREvent) {
+            document.getElementById("newHead").src = oFREvent.target.result;
+        };
+
+        function loadImageFile() {
+            if (document.getElementById("uploadImage").files.length === 0) { return; }
+            var oFile = document.getElementById("uploadImage").files[0];
+            if (!rFilter.test(oFile.type)) { 
+                swal('请上传图片', '图片格式可以为.jpg/.jpeg/.png', 'error');
+                return;
+            }
+            oFReader.readAsDataURL(oFile);
+        }
+    </script>
 
 </body>
 </html>

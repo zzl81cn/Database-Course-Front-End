@@ -41,6 +41,16 @@ li {
     list-style: none;
 }
 
+main {
+    width: calc(82% - 12px);
+    height: 100%;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 10px;
+    float: right;
+    margin-right: 6px;
+}
+
 section {
     background-color: white;
 }
@@ -186,4 +196,87 @@ ul {
 #content ul li a svg {
     vertical-align: baseline;
     fill: #464646;
+}
+
+/* 仓库列表样式 */
+
+#repository {
+    width: 80%;
+    height: 100%;
+    min-height: 100%;
+    float: left;
+    margin: 0 1%;
+}
+
+#repository nav,
+#popup nav {
+    border: 2px solid #F3F3F3;
+    border-bottom: none;
+    display: inline-block;
+    text-align: center;
+}
+
+#repository nav a,
+#popup nav a {
+    width: 120px;
+    height: 50px;
+    float: left;
+    line-height: 50px;
+    color: #464646;
+    transform: translateZ(0);
+}
+
+#repository nav a.selected::before,
+#popup nav a.selected::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #F3F3F3 #F3F3F3;
+}
+
+#repository ul {
+    margin: 0;
+    margin-top: -2px;
+    height: calc(100% - 380px);
+    width: 100%;
+}
+
+#repository ul li {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 15px;
+    border: 1px solid #F3F3F3;
+}
+
+#repository ul li a {
+    color: #0EA2C2;
+    font-size: 20px;
+}
+
+#repository ul li .label {
+    padding: 4px;
+    font-size: 14px;
+    color: white;
+    border-radius: 4px;
+    vertical-align: text-top;
+}
+
+.label.offical {
+    background-color: #EFC52A;
+}
+
+.label.original {
+    background-color: #3EF1C4;
+}
+
+.label.contribute {
+    background-color: #9e6bcb;
+}
+
+#repository ul li p {
+    color: #858585;
+    margin-left: 20px;
 }

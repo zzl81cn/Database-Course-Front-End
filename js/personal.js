@@ -48,7 +48,7 @@ $(
             $('#fill').delay(200).hide(0);
         })
 
-
+        // 切换弹窗表单
         var $formNavLink = $('#popup nav a');
         $formNavLink.each(function(index, el) {
             $(el).click(function(event) {
@@ -57,16 +57,15 @@ $(
 
                 if (index === 0) {
                     $('#popup').css('height', '540');
-                    $('#basicForm').css('margin-left', '+=404');
-                    $('#passwordForm').css({'margin-left': '+=404'});
+                    $('#basicForm').css('left', '+=404');
+                    $('#passwordForm').css({'left': '+=404'});
                 } else {
                     $('#popup').css('height', '400');
-                    $('#basicForm').css('margin-left', '-=404');
-                    $('#passwordForm').css({'margin-left': '-=404', 'margin-top': '0'});
+                    $('#basicForm').css('left', '-=404');
+                    $('#passwordForm').css({'left': '-=404'});
                 }
             });
         });
-
 
         // 画图表
         var myChart = echarts.init(document.getElementById('chart'));

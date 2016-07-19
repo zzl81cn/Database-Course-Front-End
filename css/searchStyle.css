@@ -1,0 +1,15 @@
+#t2 {
+	width: 82%;
+}
+
+main {
+	min-height: calc(100% - 50px);
+}
+
+#repository {
+	width: 70%;
+}
+
+#repository ul li {
+	height: auto;
+}
