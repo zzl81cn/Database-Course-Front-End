@@ -4,7 +4,7 @@ $(
             $window = $(window),
             $title = $('title');
 
-        if ($title.html() !== 'login') {
+        if ($title.html() !== 'Login') {
             $body.height($window.height() - 50);
         } else {
             $body.height($window.height());
