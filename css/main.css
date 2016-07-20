@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*
 深蓝:#004E64
 中蓝:#037FA2
@@ -174,7 +176,7 @@ ul {
     border: none;
     width: calc(100% - 30px);
     font-size: 16px;
-    padding: none;
+    padding: 0;
 }
 
 #content .head {
@@ -403,4 +405,81 @@ ul {
 #messageBoard #message span:nth-of-type(2) {
     color: #858585;
     font-size: 14px;
+}
+
+/*好友列表*/
+#friends {
+    position: absolute;
+    height: calc(100% - 50px);
+    overflow: scroll;
+    width: 82%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 50px;
+    right: -82%;
+    box-sizing: border-box;
+    padding: 10px 30px;
+}
+
+#friends > p {
+    color: white;
+    font-size: 20px;
+}
+
+#friends div {
+    margin: 10px 0;
+    height: 250px;
+    width: 33%;
+    float: left;
+}
+
+#friends div a {
+    display: block;
+    width: 100px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+#friends div a img {
+    border-radius: 4px;
+    width: 100px;
+    height: 100px;
+}
+
+#friends div a::before {
+    content: attr(username);
+    line-height: 30px;
+    position: absolute;
+    height: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color: white;
+    -webkit-transition: height 0.5s;
+}
+
+#friends div a:hover::before {
+    height: 30px;
+}
+
+#friends div p {
+    width: 70%;
+    color: #F3F3F3;
+}
+
+/*消息提醒列表*/
+ul#messageList {
+    position: absolute;
+    width: 100%;
+    bottom: 50px;
+}
+
+#messageList li {
+    width: 100%;
+    height: 60px;
+    color: white;
+    background-color: black;
 }

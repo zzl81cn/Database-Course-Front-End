@@ -12,7 +12,7 @@ $(
                     .css({'z-index': '0', 'cursor': 'auto'})
                     .animate({top: '19', right: '5'}, 200, function() {
                         $(this).attr('disabled', true);
-                    })
+                    });
                 $($buttons[1 - index]).animate({top: '35'}, 200)
                     .css({'z-index': '1', 'cursor': 'pointer'})
                     .animate({top: '15', right: '10'}, 200, function() {

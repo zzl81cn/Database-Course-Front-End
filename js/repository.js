@@ -1,3 +1,9 @@
-/**
- * Created by lirui on 16/7/19.
- */
+$(
+    function () {
+        $('#search').keyup(function (event) {
+            if (event.keyCode === 13) {
+                
+            }
+        });
+    }
+);
