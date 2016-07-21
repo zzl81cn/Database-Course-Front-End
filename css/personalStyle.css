@@ -51,14 +51,25 @@
     position: relative;
 }
 
-#social button#follow {
+#social button.follow {
     background-color: #00FBCD;
     z-index: 1;
     right: 10px;
 }
 
-#social button#unfollow {
+#social button.unfollow {
     background-color: #00C9FA;
+    top: 19px;
+    right: 5px;
+}
+
+#social button.selected {
+    z-index: 1;
+    top: 15px;
+    right: 10px;
+}
+
+#social button.unselected {
     top: 19px;
     right: 5px;
 }

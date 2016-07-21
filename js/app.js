@@ -12,11 +12,26 @@ $(
 
         $('#showFriends').click(function () {
             var $friends = $('#friends');
-            if ($friends.css('right') === '0px') {
-                $friends.animate({right: '-82%'}, 800);
+            if ($friends.css('height') === '0px') {
+                $friends.css('height', 'calc(100% - 50px)');
             } else {
-                $friends.animate({right: '0'}, 800);
+                $friends.css('height', '0');
             }
+        });
+
+        $('#messageList li a').each(function (index, el) {
+            $(el).click(function (event) {
+               if ($(el).attr('class') === 'yes') {
+
+               } else {
+
+               }
+
+                $(el).parent()
+                    .animate({'margin-left': '-100%'}, 400, function () {
+                        $(this).remove();
+                    });
+            });
         });
     }
 );

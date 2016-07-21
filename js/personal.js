@@ -2,8 +2,8 @@ $(
     function () {
         // 按钮点击效果
         var $buttons = $('#social button'),
-            $followButton = $('#follow'),
-            $unfollowButton = $('#unfollow');
+            $followButton = $('.follow'),
+            $unfollowButton = $('.unfollow');
 
         $buttons.each(function(index, el) {
             $(el).click(function(event) {
@@ -18,6 +18,17 @@ $(
                     .animate({top: '15', right: '10'}, 200, function() {
                         $(this).attr('disabled', false);
                     });
+
+                var followed = true;
+                if ($(el).attr('id') === 'follow') {
+                    followed = true;
+                } else {
+                    followed = false;
+                }
+
+                $.post('/Home/follow', {'followed': followed}, function (data) {
+                    alert(data);
+                });
             });
         });
 
